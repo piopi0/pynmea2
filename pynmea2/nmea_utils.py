@@ -22,13 +22,13 @@ def timestamp(s):
     Converts a timestamp given in "hhmmss[.ss]" ASCII text format to a
     datetime.time object
     '''
-    ms_s = s[6:]
+    ms_s = s[7:]
     ms = ms_s and int(float(ms_s) * 1000000) or 0
 
     t = datetime.time(
         hour=int(s[0:2]),
         minute=int(s[2:4]),
-        second=int(s[4:6]),
+        second=int(s[5:7]),
         microsecond=ms,
         tzinfo=datetime.timezone.utc)
     return t
