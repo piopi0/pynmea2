@@ -26,7 +26,7 @@ def timestamp(s):
     ms = ms_s and int(float(ms_s) * 1000000) or 0
 
     t = datetime.time(
-        hour=int(s[1:2]),
+        hour=int(s[0:2]),
         minute=int(s[2:4]),
         second=int(s[4:6]),
         microsecond=ms,
